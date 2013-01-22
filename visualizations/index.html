@@ -75,6 +75,33 @@
         line-height: 100%;
       }
       
+      .info-container {
+        font-family: Helvetica,Arial,Geneva,sans-serif;
+      }
+      
+      .info-item {
+        float: left;
+        width: 50%;
+        text-align: center;
+      }
+      
+      .info-item .info-item-inner {
+        padding: 1em;
+      }
+      
+      .info-item .info-main {
+        font-size: 3em;
+        font-weight: bold;
+        line-height: 1.5em;
+      }
+      .info-item .info-title {
+        font-size: 1.5em;
+        line-height: 1.5em;
+      }
+      .info-item .info-description {
+        font-size: .8em;
+      }
+      
       /**
        * Responsive creen size styles
        */
@@ -94,8 +121,22 @@
     <!-- Initial HTML for application -->
     <div id="minnpost-governor-budget-2013">
       
-      <div class="by-the-numbers clear-block">
-      
+      <div class="info-container clear-block">
+        <div class="info-item">
+          <div class="info-item-inner">
+            <div class="info-main">-5%</div>
+            <div class="info-title">Education</div>
+            <div class="info-description">This is important because of blah blah and things.</div>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-item-inner">
+            <div class="info-main">+9%</div>
+            <div class="info-title">Taxes</div>
+            <div class="info-description">This is important because of blah blah and things.</div>
+          </div>
+        </div>
       </div>
       
       <div class="footnote">
