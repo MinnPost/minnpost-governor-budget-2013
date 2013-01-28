@@ -110,6 +110,10 @@
         padding: 1em;
       }
       
+      .info-container ul li {
+        list-style: none;
+      }
+      
       .info-container .column {
         float: left;
         font-family: Helvetica,Arial,Geneva,sans-serif;
@@ -149,6 +153,8 @@
       
       .info-container .separator-text {
         color: #898989;
+        border-top: 1px dashed;
+        border-bottom: 1px dashed;
       }
       
       .info-container .positive {
@@ -156,11 +162,6 @@
       }
       .info-container .negative {
         color: #B61624;
-      }
-      
-      .info-container .higlight {
-        font-size: 150%;
-
       }
       
       .info-container .note {
@@ -173,8 +174,17 @@
         color: #76107F;
       }
       
+      .info-container .section-description-image .section-description {
+        padding-top: 2em;
+      }
+      
       .info-container .section-description:first-letter {
         font-size: 200%;
+      }
+      
+      .info-container .section-description-image img {
+        width: auto;
+        height: 10em;
       }
       
       .info-container .section-summary {
@@ -184,7 +194,7 @@
       }
       
       .info-container .section-summary .highlight {
-        font-size: 366.666%;
+        font-size: 325%;
         line-height: 1.25em;
         font-family: Helvetica,Arial,Geneva,sans-serif;
       }
@@ -193,6 +203,18 @@
         font-size: 150%;
         font-weight: bold;
         line-height: 1em;
+      }
+      
+      .info-container .column .image-list {
+        text-align: left;
+        font-size: 85%;
+      }
+      
+      .info-container .column .image-list img {
+        width: 2em;
+        height: 1.5em;
+        padding: 0 1em .5em 0;
+        margin-bottom: -1em;
       }
       
       
@@ -250,46 +272,35 @@
           
           <p class="separator-text">But wait</p>
           
-          <div class="two-column clear-block">
-            <div class="column">
-              <div class="column-inner">
-                <p>The Governor proposed a $500 rebate per homeowner.<br />
-                  (Aimed to reduce property tax burden <span class="details-tooltip">?</span>)</p>
-              </div>
-            </div>
-            
-            <div class="column">
-              <div class="column-inner">
-                <div class="example-image"></div>
-              </div>
-            </div>
+          <div class="section-description-image clear-block">
+            <img class="right" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/HomeOwner.svg" />
+            <p class="section-description">
+              The Governor proposed a <strong>$500 rebate</strong> per homeowner.  Aimed to reduce tax burder.  <a class="details-tooltip" href="#" title="Learn more">?</a>
+            </p>
           </div>
           
-          <p>This rebate will cost <span class="higlight negative">-$1,438,600,000</span></p>
+          <p class="section-summary">
+            This rebate will cost: <br />
+            <span class="highlight negative">$1,438,600,000</span>
+          </p>
           
           <p class="separator-text">Plus</p>
           
-          <p>The budge adds an income tax on part-time residents.</p>
-          
-          <div class="two-column clear-block">
-            <div class="column">
-              <div class="column-inner">
-                <div class="example-image"></div>
-                <p>The Snowbird tax</p>
-              </div>
-            </div>
-            
-            <div class="column">
-              <div class="column-inner">
-                <p>Expected to raise <br />
-                  <span class="higlight positive">+$30,000,000</span></p>
-              </div>
-            </div>
+          <div class="section-description-image clear-block">
+            <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/SnowbirdTax.svg" />
+            <p class="section-description">
+              <p>The budge adds an income tax on part-time residents; this is also known as the <strong>Snowbird Tax</strong>.</p>
+            </p>
           </div>
+          
+          <p class="section-summary">
+            Expected to raise: <br />
+            <span class="highlight positive">$30,000,000</span>
+          </p>
           
           <p class="separator-text">All combined?</p>
           
-          <p>Income tax collected is projected to GO DOWN (slightly) decreasing $308,000,000 to $17,128,000,000.</p>
+          <p class="section-description">Income tax collected is projected to <strong>go down</strong> (slightly) decreasing $308,000,000 to $17,128,000,000.</p>
           
           <div class="example-chart">Chart goes here.</div>
         </div>
@@ -297,24 +308,25 @@
         <div class="sales-tax">
           <h4>Sales Tax</h4>
           
-          <p>The governor has proposed a dramatic expansion projected to raise sales tax receipts by:</p>
+          <p class="section-description">The governor has proposed a dramatic expansion projected to raise sales tax receipts by:</p>
           
           <div class="two-column clear-block">
             <div class="column">
-              <div class="column-inner">
-                <ul>
-                  <li>B2B</li>
-                  <li>Digital products</li>
-                  <li>Satellite</li>
-                  <li>Consumer goods</li>
+              <div class="column-inner clear-block">
+                <ul class="right image-list">
+                  <li><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/B2Bsalestax.svg" /> B2B</li>
+                  <li><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/DigitalandSattelite.svg" /> Digital products</li>
+                  <li><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ClothingTax.svg" /> Consumer goods</li>
                 </ul>
               </div>
             </div>
             
             <div class="column">
-              <div class="column-inner">
-                <p><span class="higlight positive">+$4,464,746,000</span> <br />
-                  (an NN.N% increase)</p>
+              <div class="column-inner clear-block">
+                <p class="section-summary left">
+                  <span class="highlight positive">+$4,464,746,000</span> <br />
+                  <span class="note">(an NN.N% increase)</span>
+                </p>
               </div>
             </div>
           </div>
