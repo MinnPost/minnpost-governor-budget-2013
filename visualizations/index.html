@@ -76,12 +76,10 @@
       }
       
       .info-container {
-        font-family: Helvetica,Arial,Geneva,sans-serif;
-        font-size: 125%;
-      }
-      
-      .info-container .section-description {
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 150%;
+        text-align: center;
+        color: #58585A;
+        line-height: 1.75em;
       }
       
       .info-container h3 {
@@ -90,6 +88,11 @@
       
       .info-container h4 {
         margin: 1em 0;
+        padding-bottom: 1.5em;
+        background: transparent url('images/divider.gif') bottom center no-repeat;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: normal;
+        font-size: 200%;
       }
       
       .info-container .example-image {
@@ -109,6 +112,7 @@
       
       .info-container .column {
         float: left;
+        font-family: Helvetica,Arial,Geneva,sans-serif;
       }
       
       .info-container .two-column .column {
@@ -121,22 +125,21 @@
       
       .info-container .column-inner {
         padding: 1em;
-        text-align: center;
         margin-bottom: 1em;
       }
       
-      .info-container img.left {
+      .info-container .left {
         float: left;
         margin: 0 1em 1em 0;
       }
       
-      .info-container img.right {
+      .info-container .right {
         float: right;
         margin: 0 0 1em 1em;
       }
       
       .info-container .column img {
-        width: 40%;
+        width: 50%;
       }
       
       .info-container .column img.right,
@@ -145,24 +148,7 @@
       }
       
       .info-container .separator-text {
-        text-align: center;
         color: #898989;
-      }
-      
-      .info-container .section-summary {
-        text-align: center;
-        margin-bottom: 2em;
-        font-size: 125%;
-        line-height: 1em;
-      }
-      
-      .info-container .section-note {
-        color: #898989;
-        font-size: 85%;
-      }
-      
-      .info-container .higlight {
-        font-size: 150%;
       }
       
       .info-container .positive {
@@ -172,9 +158,41 @@
         color: #B61624;
       }
       
+      .info-container .higlight {
+        font-size: 150%;
+
+      }
+      
+      .info-container .note {
+        color: #898989;
+        font-size: 85%;
+      }
+      
       .info-container .details-tooltip {
         font-weight: bold;
         color: #76107F;
+      }
+      
+      .info-container .section-description:first-letter {
+        font-size: 200%;
+      }
+      
+      .info-container .section-summary {
+        margin-bottom: 2em;
+        font-size: 125%;
+        line-height: 1em;
+      }
+      
+      .info-container .section-summary .highlight {
+        font-size: 366.666%;
+        line-height: 1.25em;
+        font-family: Helvetica,Arial,Geneva,sans-serif;
+      }
+      
+      .info-container .column .highlight {
+        font-size: 150%;
+        font-weight: bold;
+        line-height: 1em;
       }
       
       
@@ -202,27 +220,33 @@
         
         <div class="income-tax">
           <h4>Income Tax</h4>
-          <p class="section-description">Over the next two years, the Governor proposes raising the tax rate by two percentage points on the the richest Minnesotans.</p>
+          <p class="section-description">Over the next two years, the Governor proposes raising the tax rate by <strong>two percentage points</strong> on the the richest Minnesotans.</p>
           
           <div class="two-column clear-block">
             <div class="column">
               <div class="column-inner clear-block">
-                <img class="left" src="images/Couple.svg" />
-                <p>Couples earning $250,000+ per year</p>
+                <p class="right">Couples earning <br \> 
+                  <span class="highlight">$250,000+</span>  <br \> 
+                  <span class="note">(per year)</span></p>
+                <img class="right" src="images/Couple.svg" />
               </div>
             </div>
             
             <div class="column">
               <div class="column-inner clear-block">
                 <img class="left" src="images/Individual.svg" />
-                <p>Individuals earning $150,000+ per year</p>
+                <p class="left">Individuals earning <br \> 
+                  <span class="highlight">$150,000+</span> <br \> 
+                  <span class="note">(per year)</span></p>
               </div>
             </div>
           </div>
           
-          <p class="section-summary">Estimated to bring in 
-            <span class="higlight positive">+$1,098,800,000</span> <br />
-            <span class="section-note">(an increase of NN.N%)</span></p>
+          <p class="section-summary">
+            Estimated to bring in a total of: <br />
+            <span class="highlight positive">$1,098,800,000</span> <br />
+            <span class="note">(That's an increase of NN.N%)</span>
+          </p>
           
           <p class="separator-text">But wait</p>
           
