@@ -15,7 +15,7 @@ module.exports = function(grunt) {
       upload: [
         {
           src: 'visualizations/images/*',
-          dest: 'projects/minnpost-governor-budget-2013/'
+          dest: 'projects/minnpost-governor-budget-2013/images/'
         }
       ]
     }
