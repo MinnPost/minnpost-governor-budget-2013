@@ -77,6 +77,19 @@
       
       .info-container {
         font-family: Helvetica,Arial,Geneva,sans-serif;
+        font-size: 125%;
+      }
+      
+      .info-container .section-description {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      
+      .info-container h3 {
+        margin: 1em 0;
+      }
+      
+      .info-container h4 {
+        margin: 1em 0;
       }
       
       .info-container .example-image {
@@ -109,11 +122,43 @@
       .info-container .column-inner {
         padding: 1em;
         text-align: center;
+        margin-bottom: 1em;
+      }
+      
+      .info-container img.left {
+        float: left;
+        margin: 0 1em 1em 0;
+      }
+      
+      .info-container img.right {
+        float: right;
+        margin: 0 0 1em 1em;
+      }
+      
+      .info-container .column img {
+        width: 40%;
+      }
+      
+      .info-container .column img.right,
+      .info-container .column img.left {
+        width: 33.3333%;
       }
       
       .info-container .separator-text {
         text-align: center;
-        color: #ABABAB;
+        color: #898989;
+      }
+      
+      .info-container .section-summary {
+        text-align: center;
+        margin-bottom: 2em;
+        font-size: 125%;
+        line-height: 1em;
+      }
+      
+      .info-container .section-note {
+        color: #898989;
+        font-size: 85%;
       }
       
       .info-container .higlight {
@@ -131,6 +176,7 @@
         font-weight: bold;
         color: #76107F;
       }
+      
       
       /**
        * Responsive creen size styles
@@ -156,25 +202,27 @@
         
         <div class="income-tax">
           <h4>Income Tax</h4>
-          <p>Over the next two years, the Governor proposes raising the tax rate by two percentage points on the the richest Minnesotans.</p>
+          <p class="section-description">Over the next two years, the Governor proposes raising the tax rate by two percentage points on the the richest Minnesotans.</p>
           
           <div class="two-column clear-block">
             <div class="column">
-              <div class="column-inner">
-                <div class="example-image"></div>
+              <div class="column-inner clear-block">
+                <img class="left" src="images/Couple.svg" />
                 <p>Couples earning $250,000+ per year</p>
               </div>
             </div>
             
             <div class="column">
-              <div class="column-inner">
-                <div class="example-image"></div>
+              <div class="column-inner clear-block">
+                <img class="left" src="images/Individual.svg" />
                 <p>Individuals earning $150,000+ per year</p>
               </div>
             </div>
           </div>
           
-          <p>Estimated to bring in <span class="higlight positive">+$1,098,800,000</span> (an increase of NN.N%).</p>
+          <p class="section-summary">Estimated to bring in 
+            <span class="higlight positive">+$1,098,800,000</span> <br />
+            <span class="section-note">(an increase of NN.N%)</span></p>
           
           <p class="separator-text">But wait</p>
           
