@@ -79,22 +79,57 @@
         font-family: Helvetica,Arial,Geneva,sans-serif;
       }
       
-      .info-item {
-        float: left;
+      .info-container .example-image {
         width: 50%;
-        text-align: center;
+        margin: .5em auto;
+        background-color: #BCBCBC;
+        height: 4em;
       }
       
-      .info-item .info-item-inner {
+      .info-container .example-chart {
+        width: 90%;
+        margin: .5em auto;
+        background-color: #BCBCBC;
+        height: 8em;
         padding: 1em;
       }
       
-      .info-item .info-item-main {
-        font-size: 1.5em;
-        line-height: 1.5em;
+      .info-container .column {
+        width: 50%;
       }
-      .info-item .info-item-subtext {
-        font-size: .8em;
+      
+      .info-container .two-column .column {
+        width: 50%;
+      }
+      
+      .info-container .five-column .column {
+        width: 20%;
+      }
+      
+      .info-container .column-inner {
+        padding: 1em;
+        text-align: center;
+      }
+      
+      .info-container .separator-text {
+        text-align: center;
+        color: #ABABAB;
+      }
+      
+      .info-container .higlight {
+        font-size: 150%;
+      }
+      
+      .info-container .positive {
+        color: #107F3E;
+      }
+      .info-container .negative {
+        color: #B61624;
+      }
+      
+      .info-container .details-tooltip {
+        font-weight: bold;
+        color: #76107F;
       }
       
       /**
@@ -117,118 +152,311 @@
     <div id="minnpost-governor-budget-2014">
       
       <div class="info-container clear-block">
-        <h3>Taxes</h3>
-        <p style="color: #878787">(Tom's Alternative Comparison (stacked vertical bar chart) would be a great visual to see the changes in taxes.)</p>
+        <h3>Revenue and Tax Changes</h3>
         
-        <h4>Income Tax</h4>
-        <div class="income-section clear-block">
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Tax rate on the richest Minnesotans up 2 percentage points to <strong>9.85%</strong>.</div>
-              <div class="info-item-subtext">For couples earning $250,000 or $150,000 for individuals.  This is estimated to bring in $1,098,800,000</div>
+        <div class="income-tax">
+          <h4>Income Tax</h4>
+          <p>Over the next two years, the Governor proposes raising the tax rate by two percentage points on the the richest Minnesotans.</p>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <div class="example-image"></div>
+                <p>Couples earning $250,000+ per year</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <div class="example-image"></div>
+                <p>Individuals earning $150,000+ per year</p>
+              </div>
             </div>
           </div>
           
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Property tax refund of <strong>$500</strong> per homeowner.</div>
-              <div class="info-item-subtext">Although this refund aims to reduce property tax burden (which is generally collected at the local level - we have a statewide property tax but it is unaffected by the proposal) it is offered by the state as a rebate that will lower the state's income tax receipts. The rebate will cost $1,438,600,000.</div>
+          <p>Estimated to bring in <span class="higlight positive">+$1,098,800,000</span> (an increase of NN.N%).</p>
+          
+          <p class="separator-text">But wait</p>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <p>The Governor proposed a $500 rebate per homeowner.<br />
+                  (Aimed to reduce property tax burden <span class="details-tooltip">?</span>)</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <div class="example-image"></div>
+              </div>
             </div>
           </div>
           
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Snowbird tax expects to raise <strong>$30,000,000</strong>.</div>
-              <div class="info-item-subtext">The "snowbird tax" is an ncome tax for part-time residents of the state.</div>
+          <p>This rebate will cost <span class="higlight negative">-$1,438,600,000</span></p>
+          
+          <p class="separator-text">Plus</p>
+          
+          <p>The budge adds an income tax on part-time residents.</p>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <div class="example-image"></div>
+                <p>The Snowbird tax</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <p>Expected to raise <br />
+                  <span class="higlight positive">+$30,000,000</span></p>
+              </div>
             </div>
           </div>
           
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Net income tax collected up <strong>3.8%</strong>.</div>
-              <div class="info-item-subtext">The net effect of the upper bracket tax increase, the property tax refund and the snowbird tax is that income tax collected by the state is projected to go down slightly, by $308,000,000 to $17,128,000.</div>
+          <p class="separator-text">All combined?</p>
+          
+          <p>Income tax collected is projected to GO DOWN (slightly) decreasing $308,000,000 to $17,128,000,000.</p>
+          
+          <div class="example-chart">Chart goes here.</div>
+        </div>
+        
+        <div class="sales-tax">
+          <h4>Sales Tax</h4>
+          
+          <p>The governor has proposed a dramatic expansion projected to raise sales tax receipts by:</p>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <ul>
+                  <li>B2B</li>
+                  <li>Digital products</li>
+                  <li>Satellite</li>
+                  <li>Consumer goods</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <p><span class="higlight positive">+$4,464,746,000</span> <br />
+                  (an NN.N% increase)</p>
+              </div>
+            </div>
+          </div>
+          
+          <p class="separator-text">And</p>
+          
+          <p>Plans to decrease rate of sales tax from 6.875% to 5.5%.</p>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <div class="example-chart">Slider goes here</div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <p><span class="higlight negative">-$2,381,701,000</span></p>
+              </div>
+            </div>
+          </div>
+          
+          <p class="separator-text">Plus an extra</p>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <div class="example-image"></div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <p><span class="higlight positive">+$15,000,000</span> <br />
+                  from the motor vehicle rental tax.  <span class="details-tooltip">?</span></p>
+              </div>
+            </div>
+          </div>
+        
+          <p class="separator-text">All combined</p>
+          
+          <p>The amount of sales tax to be collected will be raised by $2,098,045,000 for a total of +$12,221,045,000.  (NN.N% increase)</p>
+        </div>
+        
+        <div class="tobacco-tax">
+          <h4>Cigarette and Tobacco Tax</h4>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <h5>Current</h5>
+                <div class="example-image"></div>
+                <p>$0.48 per pack tax.  $0.75 health impact fee.</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <h5>Proposed</h5>
+                <div class="example-image"></div>
+                <p>$1.42 per pack tax.  $0.75 health impact fee.</p>
+              </div>
+            </div>
+          </div>
+          
+          <p>Total fees increase to $1.23 to $2.17 per pack.</p>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <div class="example-image"></div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <h5>Other tobacco products</h5>
+                <p>Increase from 35% to 55% <br />
+                  (Health impact remains at 35)</p>
+              </div>
+            </div>
+          </div>
+          
+          <p>Total tax and fees increase from 70% to 90%.  <span class="details-tooltip">?</span></p>
+        </div>
+        
+        <div class="corporate-tax">
+          <h4>Corporate Tax</h4>
+          
+          <p>The budget proposes dropping rate from 9.8% to 8.4% (which would put MN from 4th to 12th highest among states).</p>
+          
+          <p>A cost of <span class="highlight negative">-$318,000,000</span></p>
+        
+          <p class="separator-text">But</p>
+          
+          <p>Expands types of businesses/loopholes/etc.</p>
+          
+          <p>Earning an additional <span class="highlight positivive">+$322,900,000</span> (an additional $5,000,000).</p>
+        
+          <p class="separator-text">Combined</p>
+          
+          <div class="two-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <div class="example-image"></div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <p>For a total corporate tax earning of <br />
+                  <span class="highlight positivive">+$1,959,000,000</span></p>
+              </div>
             </div>
           </div>
         </div>
         
-        <h4>Sales Tax</h4>
-        <div class="income-section clear-block">
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">The expansion is projected to raise sales tax receipts by <strong>$4,464,746,000</strong>.</div>
-              <div class="info-item-subtext">The state sales tax was forecast to raise $10,123,000,000 in the biennium. The governor proposes a dramatic expansion in the types of goods and services that are taxed in Minnesota. For example. The expansion is projected to raise sales tax receipts by $4,464,746,000.</div>
-            </div>
-          </div>
+        <div class="other-tax">
+          <h4>Other Tax Changes</h4>
+          <p>Stuff goes here..........</p>
           
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">The governor also proposes dropping the rate of the sales tax, from 6.875% to <strong>5.5%</strong>.</div>
-              <div class="info-item-subtext">This rate reduction will cost $2,381,701,000.</div>
-            </div>
-          </div>
-          
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">The motor vehicle rental tax will be raised <strong>2.85%</strong>.</div>
-              <div class="info-item-subtext">This should bring in an bring in an extra $15,000,000.</div>
-            </div>
-          </div>
-          
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Sales tax ???.</div>
-              <div class="info-item-subtext">The net effect of the sales tax expansion and rate reduction is to raise the amount of sales tax collected by $2,098,045,000 to $12,221,045,000.</div>
-            </div>
-          </div>
         </div>
         
-        <h4>Corporate Tax</h4>
-        <div class="income-section clear-block">
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">The corporate tax rate drops from 9.8% to <strong>8.4%</strong>.</div>
-              <div class="info-item-subtext">The cost of this proposal is $318,000,000. He also proposes measures to expand the types of businesses that pay this tax, earning and additional $322,900,000. This brings in an additional $5,000,000, to a total of $1,959,000,000.</div>
-            </div>
-          </div>
+        <div class="total-tax">
+          <h4>Total Tax</h4>
+          
+          <div class="example-chart">Chart goes here</div>
+          
+          <p>Total in new revenue: <span class="highlight positivive">+$11,780,000,000</span> <br />
+            ($2,139,000,000 versus forecast)</p>
         </div>
         
-        <h4>Cigarette and tobacco tax</h4>
-        <div class="income-section clear-block">
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Raises state cigarette tax to <strong>$1.42</strong> per pack.</div>
-              <div class="info-item-subtext">The current state cigarette tax is $.48 per pack, plus a $.75 health impact fee. Dayton proposes raising the tax $.94 per pack, to $1.42 per pack. The health impact fee would remain unchanged, so the total tax and fee on a pack of cigarettes would rise to $2.17 from $1.23.</div>
+        
+        <h3>New Spending</h3>
+        <div class="new-spending">
+          <p>The new budget proposes to increase spending by a total of <span class="highlight positive">+$1,031,000,000</span></p>
+          
+          <div class="five-column clear-block">
+            <div class="column">
+              <div class="column-inner">
+                <h5>K-12 Education</h5>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                </ul>
+              </div>
+              
+              <div class="column-inner">
+                <h5>Higher Education</h5>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                </ul>
+              </div>
+              
+              <div class="column-inner">
+                <h5>Local Aids and Credits</h5>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                </ul>
+              </div>
+              
+              <div class="column-inner">
+                <h5>Health and Human Services</h5>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                </ul>
+              </div>
+              
+              <div class="column-inner">
+                <h5>Public Safety</h5>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="column-inner">
+                <p>For a total corporate tax earning of <br />
+                  <span class="highlight positivive">+$1,959,000,000</span></p>
+              </div>
             </div>
           </div>
           
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Taxes on tobacco products would raise to <strong>90%</strong> of wholesale price.</div>
-              <div class="info-item-subtext">The tobacco products tax is currently assessed at 35% of the wholesale price. The governor proposes raising it to 55%. The health impact fee of 35% of the price would remain unchanged. The total tax and fee on tobacco products would rise from 70% of the wholesale price to 90%.</div>
-            </div>
-          </div>
-          
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Taxes from tobacco products would raise <strong>95%</strong>.</div>
-              <div class="info-item-subtext">The combined impact of these changes is estimated to raised $369,900,000 for the general fund, almost double the $389,000,000 expected under current law.</div>
-            </div>
-          </div>
-        </div>
-        
-        <h4>Other tax changes</h4>
-        <div class="income-section clear-block">
-          <div class="info-item">
-            <div class="info-item-inner">
-              <div class="info-item-main">Freezing an increase in state property tax for business would cost <strong>$25,100,000</strong>.</div>
-              <div class="info-item-subtext">The governor proposes freezing an increase in state property tax for businesses based on inflation. The proposal would cost $25,100,000. Various small adjustments will result in other state taxes bringing in $2,000,000 less than projected.</div>
-            </div>
-          </div>
+          <div class="example-chart">Chart goes here</div>
         </div>
       </div>
       
+      
       <div class="footnote">
         <p>Budget data provided by <a href="http://www.mmb.state.mn.us/budget2013/" target="_blank">Minnesota and Management Budget</a>.  Code, techniques, and data on <a href="https://github.com/MinnPost/minnpost-governor-budget-2013" target="_blank">Github</a>.</p>
+        
+        <p>All icons from The Noun Project. 
+Couple and Person by Jens Tarning
+Home by Andrew Fortnum
+Palm Tree by YouGou
+Handshake by Remy Medard
+Coat by Maurizio Fusillo
+Car by Benjamin Orlovski
+Cigarettes by Julia Soderberg
+Pipe by Okan Benn
+Cigarettes (single) by vivien wack
+City by inna belenkey
+Education by Thibault Geffroy
+Caution by Jose Hernandez
+Economic Crisis by Camilo Roa
+Money bag
+City by Carla Gomez
+Paper by Tom Schott</p>
+      </div>
     </div>
     
     
