@@ -297,7 +297,7 @@
     
     <!-- Initial HTML for application -->
     <div id="minnpost-governor-budget-2014">
-      <a name="operator-top"></a>
+      <span id="operator-top"></span>
     
       <div class="operator">
         <div class="clear-block">
@@ -759,8 +759,10 @@ Paper by Tom Schott</p>
             
             $('html, body').animate({ scrollTop: (top - orgH - anchorOffset) }, 600,
               function() {
-                $operatorItems.removeClass('active');
-                $this.addClass('active');
+                if ($operatorNavItems.is($this)) {
+                  $operatorItems.removeClass('active');
+                  $this.addClass('active');
+                }
               });
           });
         });
