@@ -712,31 +712,56 @@ Paper by Tom Schott</p>
     
       (function($, w, undefined) {
         $(document).ready(function() {
-          // Handle fixed menu
           var $operator = $('.operator');
           var orgT = $operator.offset().top;
           var orgH = $operator.height();
           var anchorOffset = 100;
+          var $operatorItems = $('.operator a');
+          var $operatorNavItems = $('.operator .operator-nav a');
+          var $navTargets = $operatorNavItems.map(function(){
+            var item = $($(this).attr("href"));
+            if (item.length) {
+              return item; 
+            }
+          });
           
+          // Handle fixed menu and scrollspy
           $(w).scroll(function() {
-            if (($(this).scrollTop() > orgT) && !$operator.hasClass('glued')) {
+            var $this = $(this);
+            var top = $this.scrollTop() + orgH + anchorOffset - 3;
+            var $current;
+          
+            // Add class for fixed menu
+            if (($this.scrollTop() > orgT) && !$operator.hasClass('glued')) {
               $operator.addClass('glued');
             }
-            else if (($(this).scrollTop() <= orgT) && $operator.hasClass('glued')) {
+            else if (($this.scrollTop() <= orgT) && $operator.hasClass('glued')) {
               $operator.removeClass('glued');
+            }
+            
+            // Scrollspy
+            $navTargets.each(function() {
+              if ($(this).offset().top <= top) {
+                $current = $(this);
+              }
+            });
+            if ($current) {
+              $operatorNavItems.removeClass('active');
+              $('a[href=#' + $current.attr('id') + ']').addClass('active');
             }
           });
           
           // Handle clicking scrolling to menu items
-          $('.operator a').on('click', function(e) {
+          $operatorItems.on('click', function(e) {
             var $this = $(this);
             var top = $($this.attr('href')).offset().top;
             e.preventDefault();
             
-            $('html, body').animate({ scrollTop: (top - orgH - anchorOffset) }, 600);
-            
-            $('.operator a').removeClass('active');
-            $this.addClass('active');
+            $('html, body').animate({ scrollTop: (top - orgH - anchorOffset) }, 600,
+              function() {
+                $operatorItems.removeClass('active');
+                $this.addClass('active');
+              });
           });
         });
       })(jQueryCustom, window);
