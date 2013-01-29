@@ -35,7 +35,7 @@
   <!-- START: Embeddable -->
   <div class="node-body fieldlayout node-field-body">
     <style type="text/css">
-      /* @import url(''); */
+      @import url('https://s3.amazonaws.com/data.minnpost/js/flurid-2.1/flurid.min.css');
     </style>
     
     <style type="text/css">
@@ -76,7 +76,7 @@
       }
       
       .info-container {
-        font-size: 150%;
+        font-size: 175%;
         text-align: center;
         color: #58585A;
         line-height: 1.75em;
@@ -90,137 +90,113 @@
         margin: 1em 0;
         padding-bottom: 1.5em;
         background: transparent url('https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/divider.gif') bottom center no-repeat;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: 'Times New Roman', Georgia, Times, serif;
         font-weight: normal;
-        font-size: 200%;
+        font-size: 225%;
       }
       
-      .info-container .example-image {
-        width: 50%;
-        margin: .5em auto;
-        background-color: #BCBCBC;
-        height: 4em;
+      .info-container img {
+        width: 75%;
+        max-width: 100%;
       }
-      
-      .info-container .example-chart {
-        width: 90%;
-        margin: .5em auto;
-        background-color: #BCBCBC;
-        height: 8em;
-        padding: 1em;
-      }
-      
+            
       .info-container ul li {
         list-style: none;
       }
-      
-      .info-container .column {
-        float: left;
-        font-family: Helvetica,Arial,Geneva,sans-serif;
+
+      .info-container .number {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       }
       
-      .info-container .two-column .column {
-        width: 50%;
+      .info-container .highlight {
+        font-size: 175%;
+        line-height: 1em;
+        font-weight: bold;
       }
       
-      .info-container .five-column .column {
-        width: 20%;
+      .info-container .highlight-double {
+        font-size: 300%;
+        line-height: 1.3333em;
+        font-weight: bold;
       }
       
-      .info-container .column-inner {
-        padding: 1em;
-        margin-bottom: 1em;
+      .info-container .italics {
+        font-style: italic;
       }
       
       .info-container .left {
         float: left;
-        margin: 0 1em 1em 0;
       }
       
       .info-container .right {
         float: right;
-        margin: 0 0 1em 1em;
       }
       
-      .info-container .column img {
-        width: 50%;
-      }
-      
-      .info-container .column img.right,
-      .info-container .column img.left {
-        width: 33.3333%;
-      }
-      
-      .info-container .separator-text {
-        border-top: 1px dashed #979795;
-        width: 75%;
+      .info-container .separator {
+        border-top: 1px solid #979795;
+        width: 25%;
         margin: 0 auto 2em auto;
       }
       
       .info-container .positive {
         color: #107F3E;
       }
+      
       .info-container .negative {
         color: #B61624;
       }
       
       .info-container .note {
         color: #898989;
-        font-size: 85%;
+        font-size: 75%;
+        line-height: 1em;
       }
+      
+      .info-container .mar-center { margin-right: auto; margin-left: auto; }
+      
+      .info-container .width-max { width: 100%; }
+      .info-container .width-95  { width: 95%; }
+      .info-container .width-50  { width: 90%; }
+      .info-container .width-85  { width: 85%; }
+      .info-container .width-50  { width: 50%; }
+      
+      .info-container .pad-side-3 { padding-left: 3%; padding-right: 3%; }
+      .info-container .pad-side-5 { padding-left: 5%; padding-right: 5%; }
+      
+      .info-container .pad-top-5  { padding-top: 5%; }
+      .info-container .pad-top-10 { padding-top: 10%; }
+      .info-container .pad-top-15 { padding-top: 15%; }
+      .info-container .pad-top-20 { padding-top: 20%; }
+      
+      .info-container .mar-side-3 { margin-left: 3%; margin-right: 3%; }
+      .info-container .mar-side-5 { margin-left: 5%; margin-right: 5%; }
       
       .info-container .details-tooltip {
         font-weight: bold;
         color: #76107F;
       }
       
-      .info-container .details-tooltip img,
-      .info-container .section-description-image .details-tooltip img {
+      .info-container .details-tooltip img {
         width: 20px;
         height: 20px;
       }
       
-      .info-container .section-description-image .section-description {
-        padding-top: 2em;
+      .info-container .read-more img {
+        width: 20px;
+        height: 20px;
+      }
+      
+      .info-container .flurid .row {
+        margin-bottom: 2em;
       }
       
       .info-container .section-description:first-letter {
         font-size: 200%;
       }
       
-      .info-container .section-description-image img {
-        width: auto;
-        height: 10em;
-      }
-      
-      .info-container .section-summary {
-        margin-bottom: 2em;
-        font-size: 125%;
-        line-height: 1em;
-      }
-      
       .info-container .section-summary .highlight {
-        font-size: 325%;
-        line-height: 1.25em;
-        font-family: Helvetica,Arial,Geneva,sans-serif;
-      }
-      
-      .info-container .column .highlight {
-        font-size: 150%;
-        font-weight: bold;
-        line-height: 1em;
-      }
-      
-      .info-container .column .image-list {
-        text-align: left;
-        font-size: 85%;
-      }
-      
-      .info-container .column .image-list img {
-        width: 2em;
-        height: 1.5em;
-        padding: 0 1em .5em 0;
-        margin-bottom: -1em;
+        font-size: 300%;
+        line-height: 1.3333em;
       }
       
       
@@ -244,66 +220,127 @@
     <div id="minnpost-governor-budget-2014">
       
       <div class="info-container clear-block">
-        <h3>Revenue and Tax Changes</h3>
-        
         <div class="income-tax">
           <h4>Income Tax</h4>
-          <p class="section-description">Over the next two years, the Governor proposes raising the tax rate by <strong>two percentage points</strong> on the the richest Minnesotans.</p>
           
-          <div class="two-column clear-block">
-            <div class="column">
-              <div class="column-inner clear-block">
-                <p class="right">Couples earning <br \> 
-                  <span class="highlight">$250,000+</span>  <br \> 
-                  <span class="note">(per year)</span></p>
-                <img class="right" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Couple.svg" />
+          <div class="flurid section-tax-rate">
+            <div class="row">
+              <div class="column width_1/1 section-description last">
+                Over the next two years, the Governor proposes raising the tax rate by <strong>two percentage points</strong> on the the richest Minnesotans.
               </div>
             </div>
             
-            <div class="column">
-              <div class="column-inner clear-block">
-                <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Individual.svg" />
-                <p class="left">Individuals earning <br \> 
-                  <span class="highlight">$150,000+</span> <br \> 
-                  <span class="note">(per year)</span></p>
+            <div class="row">
+              <div class="shift left_1/16">
+                <div class="column width_1/4">
+                  <img class="right" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Couple.svg" />
+                </div>
+                
+                <div class="column width_1/4 number">
+                  <div>Couples earning</div>
+                  <div class="highlight">$250,000+</div> 
+                  <div class="note">(per year)</div>
+                </div>
+              </div>
+              
+              <div class="shift right_1/16">
+                <div class="column width_1/4 number">
+                  <div>Individuals earning</div>
+                  <div class="highlight">$150,000+</div> 
+                  <div class="note">(per year)</div>
+                </div>
+                
+                <div class="column width_1/4 last">
+                  <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Individual.svg" />
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/1 last section-summary">
+                <div>Estimated to bring in a total of:</div>
+                <div class="highlight number positive">$1,098,800,000</div>
+                <div class="note">(That's an increase of NN.N%)</div>
               </div>
             </div>
           </div>
           
-          <p class="section-summary">
-            Estimated to bring in a total of: <br />
-            <span class="highlight positive">$1,098,800,000</span> <br />
-            <span class="note">(That's an increase of NN.N%)</span>
-          </p>
+          <div class="separator"></div>
           
-          <p class="separator-text"></p>
+          <div class="flurid section-property-tax">
+            <div class="row">
+              <div class="column width_1/1 last section-description">
+                Additionally, the Governor is proposing a <strong>homeowner's rebate</strong>.
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/3 pad-top-5 number">
+                <div class="highlight-double">$500</div>
+                <div>per homeowner</div>
+                <div class="note italics">
+                  Why is this item listed under income tax?
+                  <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a> 
+                </div>
+              </div>
+              
+              <div class="column width_1/3">
+                <img class="width-95 mar-center" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/HomeOwner.svg" />
+              </div>
+              
+              <div class="column width_1/3 last number pad-top-5">
+                <div>There are approximately</div>
+                <div class="highlight">1,502,000 homesteads</div>
+                <div>in Minnesota</div>
+              </div>
+            </div>
+            
+            <!--
+            <div class="row section-summary">
+              <div class="column width_1/1">
+                This rebate will cost:
+                <div class="highlight negative">$1,438,600,000</div>
+              </div>
+            </div>
+            -->
           
-          <div class="section-description-image clear-block">
-            <img class="right" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/HomeOwner.svg" />
-            <p class="section-description">
-              The Governor proposed a <strong>$500 rebate</strong> per homeowner.  Aimed to reduce tax burder.  
-              <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
-            </p>
+            <div class="row">
+              <div class="column width_1/1 last">
+                <div class="read-more note">
+                  <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ReadMore.svg" />
+                  Read more: <a href="#">MinnPost headline link in normal style</a>
+                </div>
+              </div>
+            </div>
           </div>
           
-          <p class="section-summary">
-            This rebate will cost: <br />
-            <span class="highlight negative">$1,438,600,000</span>
-          </p>
+          <div class="separator"></div>
           
-          <p class="separator-text"></p>
-          
-          <div class="section-description-image clear-block">
-            <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/SnowbirdTax.svg" />
-            <p class="section-description">
-              <p>The budge adds an income tax on part-time residents; this is also known as the <strong>Snowbird Tax</strong>.</p>
-            </p>
+          <div class="flurid section-snow-bird-tax">
+            <div class="row">
+              <div class="column width_1/1 last section-description">
+                The budget adds an income tax on part-time residents.
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/4">
+                <img class="right width-50" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/SnowbirdTax.svg" />
+              </div>
+              
+              <div class="column width_1/4">
+                <div><strong>The Snowbird Tax</strong></div>
+              </div>
+              
+              <div class="column width_1/2 number last">
+                <div>Expected to raise:</div>
+                <div class="highlight positive">$30,000,000</div>
+              </div>
+            </div>
           </div>
           
-          <p class="section-summary">
-            Expected to raise: <br />
-            <span class="highlight positive">$30,000,000</span>
-          </p>
+          <div class="separator"></div>
+          
           
           <p class="separator-text"></p>
           
