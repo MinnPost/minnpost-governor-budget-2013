@@ -270,6 +270,14 @@
         padding: 0;
       }
       
+      .operator.glued {
+        position: fixed;
+        width: 940px;
+        margin: 0 auto;
+        z-index: 9999;
+        top: 0;
+      }
+      
       
       /**
        * Responsive creen size styles
@@ -307,8 +315,7 @@
       </div>
       
       <div class="info-container clear-block">
-        <a name="income-tax"></a>
-        <div class="section-income-tax">
+        <div id="income-tax">
           <h4>Income Tax</h4>
           
           <div class="flurid section-tax-rate">
@@ -444,8 +451,7 @@
           </div>
         </div>
         
-        <a name="sales-tax"></a>
-        <div class="section-sales-tax">
+        <div id="sales-tax">
           <h4>Sales Tax</h4>
           
           <p class="section-description">The governor has proposed a dramatic expansion projected to raise sales tax receipts by:</p>
@@ -698,11 +704,31 @@ Paper by Tom Schott</p>
     <script type="text/javascript">
       window.jQuery || document.write('<script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/jquery-1.3.2/jquery-1.3.2.min.js"><\/script>')
     </script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/underscore-1.3.3/underscore-min.js"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/jquery-custom-master-20120606/jquery-1.7.2.custom.min.js"></script>
     
     <script type="text/javascript">
+      jQueryCustom.noConflict();
+    
       (function($, w, undefined) {
-      
-      })(jQuery, window);
+        $(document).ready(function() {
+          // Handle fixed menu
+          var $operator = $('.operator');
+          var orgT = $operator.offset().top;
+          var orgH = $operator.height();
+          
+          $(w).scroll(function() {
+            console.log('here');
+            if (($(this).scrollTop() > orgT) && !$operator.hasClass('glued')) {
+              $operator.addClass('glued');
+            }
+            else if (($(this).scrollTop() <= orgT) && $operator.hasClass('glued')) {
+              $operator.removeClass('glued');
+            }
+
+          });
+        });
+      })(jQueryCustom, window);
     </script>
   </div>
   <!-- END: Embeddable -->
