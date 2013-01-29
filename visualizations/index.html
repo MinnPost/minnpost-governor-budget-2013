@@ -42,6 +42,7 @@
       #minnpost-governor-budget-2014 {
         max-width: 960px;
         margin: 0 auto;
+        padding-top: 1em;
       }
       .clear {
         clear: both;
@@ -199,6 +200,76 @@
         line-height: 1.3333em;
       }
       
+      .operator {
+        color: #58585A;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        text-align: left;
+        background-color: #F9F9F8;
+        padding: 5px 10px;
+        line-height: 1.75em;
+        font-size: 75%;
+        -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+      }
+      
+      .operator a,
+      .operator a:visited  {
+        color: #58585A;
+        text-transform: uppercase;
+        padding: 3px 7px 2px 7px;
+        margin: 5px 3px 4px 3px;
+        display: block;
+        border-bottom: 1px solid transparent;
+        border-right: 1px solid transparent;
+      }
+      
+      .operator a:hover {
+        text-decoration: none;
+      }
+      
+      .operator .operator-nav a:hover {
+        -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      
+      .operator a.active {
+        text-transform: none;
+        font-family: 'Times New Roman', Georgia, Times, serif;
+        font-weight: bold;
+        font-size: 175%;
+        margin-top: 3px;
+      }
+      .operator a.active:hover {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-bottom: 1px solid transparent;
+        border-right: 1px solid transparent;
+      }
+      
+      .operator .operator-top {
+        text-transform: none;
+        float: right;
+      }
+      
+      .operator ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .operator ul li {
+        list-style: none;
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+      
       
       /**
        * Responsive creen size styles
@@ -218,9 +289,26 @@
     
     <!-- Initial HTML for application -->
     <div id="minnpost-governor-budget-2014">
+      <a name="operator-top"></a>
+    
+      <div class="operator">
+        <div class="clear-block">
+          <ul class="operator-nav">
+            <li><a class="active" href="#income-tax">Income Tax</a></li>
+            <li><a href="#sales-tax">Sales Tax</a></li>
+            <li><a href="#tobacco-tax">Cigarette & Tobacco Tax</a></li>
+            <li><a href="#corporate-tax">Corporate Tax</a></li>
+            <li><a href="#other-tax">Other Taxes</a></li>
+            <li><a href="#new-spending">New Spending</a></li>
+          </ul>
+          
+          <a class="operator-top" href="#operator-top">Back to Top</a>
+        </div>
+      </div>
       
       <div class="info-container clear-block">
-        <div class="income-tax">
+        <a name="income-tax"></a>
+        <div class="section-income-tax">
           <h4>Income Tax</h4>
           
           <div class="flurid section-tax-rate">
@@ -341,15 +429,23 @@
           
           <div class="separator"></div>
           
-          
-          <p class="separator-text"></p>
-          
-          <p class="section-description">Income tax collected is projected to <strong>go down</strong> (slightly) decreasing $308,000,000 to $17,128,000,000.</p>
-          
-          <div class="example-chart">Chart goes here.</div>
+          <div class="flurid section-snow-bird-tax">
+            <div class="row">
+              <div class="column width_1/1 last section-description">
+                Income tax collected is projected to <strong>go down</strong> (slightly) decreasing $308,000,000 to $17,128,000,000.
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/1 last">
+                <div class="example-chart">CHART GOES HERE.</div>
+              </div>
+            </div>
+          </div>
         </div>
         
-        <div class="sales-tax">
+        <a name="sales-tax"></a>
+        <div class="section-sales-tax">
           <h4>Sales Tax</h4>
           
           <p class="section-description">The governor has proposed a dramatic expansion projected to raise sales tax receipts by:</p>
