@@ -464,7 +464,7 @@
             
             <div class="row">
               <div class="column width_1/1 last">
-                <div class="example-chart">INCOME TAX CHART GOES HERE.</div>
+                <div id="income-tax-chart"></div>
               </div>
             </div>
           </div>
@@ -857,6 +857,61 @@ Paper by Tom Schott</p>
           });
           
           // Charts
+          var incomeTaxChart = new Highcharts.Chart({
+            chart: {
+              renderTo: 'income-tax-chart',
+              type: 'column'
+            },
+            title: {
+              text: 'Income tax changes'
+            },
+            xAxis: {
+              categories: ['Forecast','New top rate','Property tax rebate','Snowbird tax','Governor proposal'],
+              title: {
+                text: null
+              },
+            },
+            yAxis: {
+            	min: -2000000000,
+            	tickInterval: 2500000000,
+              startOnTick: 'false',
+              title: {
+                text: 'In billions of $',
+              },
+              labels: {
+                formatter: function() {
+                  return Highcharts.numberFormat((this.value / 1000000000), 1) + 'B';
+                }
+              }
+            },
+            tooltip: {
+              formatter: function() {
+                return '' + 
+                  this.series.name + ' from <em>' + this.x + '</em>: <strong>$' + 
+                  Highcharts.numberFormat(this.y, 0) + '</strong>';
+              }
+            },
+            plotOptions: {
+              bar: {
+                dataLabels: {
+                  enabled: false
+                }
+              }
+            },
+            legend: {enabled:false},
+            series: [{
+              name: 'Income tax changes',
+              data: [
+                { y: 17436000000 },
+                { y: 1099000000 },
+                { y: -1439000000 },
+                { y: 30000000 },
+                { y: 17128000000 }
+              ]
+            }]
+          });
+          
+          // Total tax chart
           var taxChart = new Highcharts.Chart({
             chart: {
               renderTo: 'total-tax-changes-chart',
