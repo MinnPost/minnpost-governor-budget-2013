@@ -36,6 +36,7 @@
   <div class="node-body fieldlayout node-field-body">
     <style type="text/css">
       @import url('https://s3.amazonaws.com/data.minnpost/js/flurid-2.1/flurid.min.css');
+      @import url('https://s3.amazonaws.com/data.minnpost/js/qtip2-master-20121022/jquery.qtip.min.css');
     </style>
     
     <style type="text/css">
@@ -158,7 +159,7 @@
       .info-container .note {
         color: #898989;
         font-size: 75%;
-        line-height: 1em;
+        line-height: 1.25em;
       }
       
       .info-container .sub-note {
@@ -212,7 +213,7 @@
         color: #76107F;
       }
       
-      .info-container .details-tooltip img {
+      .info-container a.details-tooltip img {
         width: 20px;
         height: 20px;
       }
@@ -325,6 +326,14 @@
         top: 0;
       }
       
+      .ui-tooltip,
+      .qtip {
+        font-size: 125%;
+        line-height: 1.25em;
+        color: #58585A;
+        font-family: 'Times New Roman', Georgia, Times, serif;
+      }
+      
       
       /**
        * Responsive creen size styles
@@ -368,7 +377,7 @@
           <div class="flurid section-tax-rate">
             <div class="row">
               <div class="column width_1/1 section-description last">
-                Beginning in the 2013 tax year, the Governor proposes raising the income tax rate by two percentage points &emdash; to a total of 9.85% &emdash; for a new tax bracket of the richest Minnesotans.
+                Beginning in the 2013 tax year, the Governor proposes creating a new tax bracket for the richest Minnesotans. The rate for the top bracket would be 9.85%, two percentage points higher than the current 7.85% top rate.
               </div>
             </div>
             
@@ -399,6 +408,12 @@
             </div>
             
             <div class="row">
+              <div class="column width_1/1 last number note">
+                <div>This is estimated to affect 53,600 returns, 2.1% of all Minnesotan returns.</div>
+              </div>
+            </div>
+            
+            <div class="row">
               <div class="column width_1/1 last section-summary">
                 <div>Estimated to bring in a total of:</div>
                 <div class="highlight number positive">$1,098,800,000</div>
@@ -423,7 +438,7 @@
                 <div class="note">* Or the amount of the previous year's property tax bill if less than $500</div>
                 <div class="note italics">
                   Why is this item listed under income tax?
-                  <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a> 
+                  <a class="details-tooltip" href="#" data-content="The vast majority of property taxes in Minnesota are collected by local governments, so the state has little power to lower the amount of property taxes homeowners pay. Instead, the governor proposes providing property tax relief through a rebate applied against individual income tax, with the amount tied to the property taxes paid by the homeowner."><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a> 
                 </div>
               </div>
               
@@ -438,14 +453,12 @@
               </div>
             </div>
             
-            <!--
             <div class="row section-summary">
-              <div class="column width_1/1">
-                This rebate will cost:
-                <div class="highlight negative">$1,438,600,000</div>
+              <div class="column width_1/1 last">
+                The rebate is estimated to cost:
+                <div class="highlight negative number">-$1,438,600,000</div>
               </div>
             </div>
-            -->
           </div>
           
           <div class="separator"></div>
@@ -454,7 +467,7 @@
             <div class="row">
               <div class="column width_1/1 last section-description">
                 The budget also adds an income tax on part-time residents
-                <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
+                <a class="details-tooltip" href="#" data-content="Present in the state for more than 60 days but less than 183 days and who maintain an abode in Minnesota for at least six months"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
                 (the so-called Snowbird Tax).
               </div>
             </div>
@@ -531,7 +544,7 @@
                     <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/DigitalandSattelite.svg" />
                     <div class="left">
                       <div>Digital products
-                        <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
+                        <a class="details-tooltip" href="#" data-content="Affiliate nexus sales, digital goods, parallel taxation of direct satellite services and remote access software"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
                       </div>
                       <div class="note">$31,200,000</div>
                     </div>
@@ -540,7 +553,7 @@
                     <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ClothingTax.svg" />
                     <div class="left">
                       <div>Consumer Goods & Services
-                        <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
+                        <a class="details-tooltip" href="#" data-content="Including clothing on items over $100, admissions and memberships, over-the-counter drugs, personal care services and instruction, legal, accounting, and auto and other repair services"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
                       </div>
                       <div class="note">$1,060,000,000</div>
                     </div>
@@ -549,7 +562,7 @@
                     <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/B2Bsalestax.svg" />
                     <div class="left">
                       <div>Business Services
-                        <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
+                        <a class="details-tooltip" href="#" data-content="Such as legal, accounting, architecture, specialized design, computer, management consulting, advertising, employment, and business support services"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
                       </div>
                       <div class="note">$3,200,000</div>
                     </div>
@@ -624,15 +637,15 @@
           <div class="flurid section-sales-tax-motor">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                Overall, the amount of sales tax collected will be raised by $2,098,045,000.
+                Overall, the amount of sales tax collected will be raised by $2,098,710,000.
               </div>
             </div>
             
             <div class="row">
               <div class="column width_1/1 last section-summary">
                 <div>For a total of</div>
-                <div class="highlight positive number">+$12,221,045,000</div>
-                <div class="note">(NN.N% increase)</div>
+                <div class="highlight positive number">+$12,221,897,000</div>
+                <div class="note">(20.7% increase)</div>
               </div>
             </div>
           </div>
@@ -696,8 +709,8 @@
             
             <div class="row">
               <div class="column width_1/1 last section-summary">
-                <div>Combined, the increase in cigarette and tobacco taxes will raise</div>
-                <div class="highlight number positive">$369,900,000</div>
+                <div>Combined, the increase in cigarette and tobacco taxes will raise an additional</div>
+                <div class="highlight number positive">+$369,900,000</div>
               </div>
             </div>
           </div>
@@ -739,7 +752,7 @@
                   <li>Repealing the current law subtraction for foreign royalties and provisions for foreign operating corporations (FOCs)</li>
                   <li>Requiring that all sales to this state of a unitary business be included in the sales factor for this state.</li>
                   <li>Adopting statutory language requiring business transactions to meet an economic substance test to be allowed in determining Minnesota taxable income.</li>
-                  <li>Amending statutes to conform to the federal law treatment of foreign entities in Section 701 of the Internal Revenue Code. <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                  <li>Amending statutes to conform to the federal law treatment of foreign entities in Section 701 of the Internal Revenue Code. <a class="details-tooltip" href="#" data-content="Under federal law, the distributive share of income from all domestic and foreign partnerships flows to its domestic owners. Current Minnesota law excludes the net income and apportionment factors of foreign partnerships in calculating net income and apportionment factors for a unitary business."><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
                   <li>Eliminating the unintended double-deduction by excluding dividends received from a real estate investment trust (REIT) in calculating the deduction allowed to a corporation for dividends received deduction (DRD) from another corporation</li>
                 </ol>
               </div>
@@ -1003,6 +1016,7 @@ Paper by Tom Schott</p>
       window.jQuery || document.write('<script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/jquery-1.3.2/jquery-1.3.2.min.js"><\/script>')
     </script>
     <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/jquery-custom-master-20120606/jquery-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/data.minnpost/js/qtip2-master-20121022/jquerycustom.qtip.min.js"></script>
     <script type="text/javascript" src="http://code.highcharts.com/2.3.5/highcharts.js"></script>
     <script type="text/javascript" src="http://code.highcharts.com/2.3.5/modules/exporting.js"></script>
     
@@ -1014,6 +1028,7 @@ Paper by Tom Schott</p>
           var $operator = $('.operator');
           var orgT = $operator.offset().top;
           var orgH = $operator.height();
+          var windowW = $(w).width();
           var anchorOffset = 90;
           var $operatorItems = $('.operator a');
           var $operatorNavItems = $('.operator .operator-nav a');
@@ -1065,6 +1080,33 @@ Paper by Tom Schott</p>
               });
           });
           
+          // Tooltip help
+          $('.details-tooltip').on('click', function(e) {
+            e.preventDefault();
+          }).qtip({
+            content: {
+              attr: 'data-content'
+            },
+            style: {
+              classes: 'ui-tooltip-shadow ui-tooltip-light'
+            },
+            position: {
+              at: 'right center',
+              my: 'left center'
+            },
+            events: {
+              show: function(event, api) {
+                var $element = $(this).data('qtip').elements.target;
+                var left = $element.offset().left;
+                
+                if (left > (windowW / 2)) {
+                  $element.qtip('option', { 'position.at' : 'left center' });
+                  $element.qtip('option', { 'position.my' : 'right center' });
+                }
+              }
+            }
+          });
+          
           // Charts
           var incomeTaxChart = new Highcharts.Chart({
             chart: {
@@ -1081,8 +1123,8 @@ Paper by Tom Schott</p>
               },
             },
             yAxis: {
-            	min: -2000000000,
-            	tickInterval: 2500000000,
+              min: -2000000000,
+              tickInterval: 2500000000,
               startOnTick: 'false',
               title: {
                 text: 'In billions of $',
