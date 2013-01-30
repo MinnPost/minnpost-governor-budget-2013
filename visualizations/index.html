@@ -133,6 +133,14 @@
         float: right;
       }
       
+      .info-container .align-left {
+        text-align: left;
+      }
+      
+      .info-container .align-right {
+        text-align: right;
+      }
+      
       .info-container .separator {
         border-top: 1px solid #979795;
         width: 25%;
@@ -153,6 +161,12 @@
         line-height: 1em;
       }
       
+      .info-container .sub-note {
+        color: #898989;
+        font-size: 65%;
+        line-height: 1.25em;
+      }
+      
       .info-container .mar-center { margin-right: auto; margin-left: auto; }
       
       .info-container .width-max { width: 100%; }
@@ -160,11 +174,15 @@
       .info-container .width-50  { width: 90%; }
       .info-container .width-85  { width: 85%; }
       .info-container .width-50  { width: 50%; }
+      .info-container .width-40  { width: 40%; }
+      .info-container .width-30  { width: 30%; }
       
       .info-container .pad-side-3  { padding-left: 3%; padding-right: 3%; }
       .info-container .pad-side-5  { padding-left: 5%; padding-right: 5%; }
       .info-container .pad-side-10 { padding-left: 10%; padding-right: 10%; }
       
+      .info-container .pad-top-2  { padding-top: 2%; }
+      .info-container .pad-top-3  { padding-top: 3%; }
       .info-container .pad-top-5  { padding-top: 5%; }
       .info-container .pad-top-10 { padding-top: 10%; }
       .info-container .pad-top-15 { padding-top: 15%; }
@@ -178,6 +196,16 @@
       .info-container .height-4 { height: 4em; }
       .info-container .height-5 { height: 5em; }
       .info-container .height-6 { height: 6em; }
+      
+      .info-container .f-size-75 { font-size: 75% }
+      .info-container .f-size-80 { font-size: 80% }
+      .info-container .f-size-85 { font-size: 85% }
+      .info-container .f-size-90 { font-size: 90% }
+      
+      .info-container .l-height-1    { line-height: 1em }
+      .info-container .l-height-1-10 { line-height: 1.10em }
+      .info-container .l-height-1-25 { line-height: 1.25em }
+      .info-container .l-height-1-50 { line-height: 1.5em }
       
       .info-container .details-tooltip {
         font-weight: bold;
@@ -215,7 +243,6 @@
       .info-container .image-list img {
         width: 1.5em;
         height: 1.5em;
-        display: inline;
         padding-right: .5em;
       }
       
@@ -326,7 +353,7 @@
             <li><a href="#sales-tax">Sales Tax</a></li>
             <li><a href="#tobacco-tax">Cigarette & Tobacco Tax</a></li>
             <li><a href="#corporate-tax">Corporate Tax</a></li>
-            <li><a href="#other-tax">Other Taxes</a></li>
+            <li><a href="#other-revenue">Other Revenue</a></li>
             <li><a href="#new-spending">New Spending</a></li>
           </ul>
           
@@ -341,7 +368,7 @@
           <div class="flurid section-tax-rate">
             <div class="row">
               <div class="column width_1/1 section-description last">
-                Over the next two years, the Governor proposes raising the tax rate by <strong>two percentage points</strong> on the the richest Minnesotans.
+                Beginning in the 2013 tax year, the Governor proposes raising the income tax rate by two percentage points &emdash; to a total of 9.85% &emdash; for a new tax bracket of the richest Minnesotans.
               </div>
             </div>
             
@@ -385,14 +412,15 @@
           <div class="flurid section-property-tax">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                Additionally, the Governor is proposing a <strong>homeowner's rebate</strong>.
+                Additionally, the Governor is proposing a property tax rebate for all Minnesota homeowners.
               </div>
             </div>
             
             <div class="row">
-              <div class="column width_1/3 pad-top-5 number">
-                <div class="highlight-double">$500</div>
+              <div class="column width_1/3 pad-top-3 number">
+                <div class="highlight-double">$500*</div>
                 <div>per homeowner</div>
+                <div class="note">* Or the amount of the previous year's property tax bill if less than $500</div>
                 <div class="note italics">
                   Why is this item listed under income tax?
                   <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a> 
@@ -418,12 +446,41 @@
               </div>
             </div>
             -->
+          </div>
+          
+          <div class="separator"></div>
+          
+          <div class="flurid section-snow-bird-tax">
+            <div class="row">
+              <div class="column width_1/1 last section-description">
+                The budget also adds an income tax on part-time residents
+                <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
+                (the so-called Snowbird Tax).
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/2 number">
+                <div>The proposal includes taxes on Minnesota-based income (as per current policy) and <em>adds</em> a share of outstate income based on number of days spent in Minnesota.</div>
+              </div>
+              
+              <div class="column width_1/2 last number">
+                <img class="mar-center width-40" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/SnowbirdTax.svg" />
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/1 last section-summary">
+                <div>Expected to raise</div>
+                <div class="highlight positive number">+$30,000,000</div>
+              </div>
+            </div>
           
             <div class="row">
               <div class="column width_1/1 last">
                 <div class="read-more note">
                   <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ReadMore.svg" />
-                  Read more: <a href="#">MinnPost headline link in normal style</a>
+                  Read more: <a href="http://www.minnpost.com/politics-policy/2013/01/dayton-s-controversial-snowbird-tax-may-not-fly">Dayton's controversial 'snowbird tax' may not fly</a>
                 </div>
               </div>
             </div>
@@ -434,32 +491,14 @@
           <div class="flurid section-snow-bird-tax">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                The budget adds an income tax on part-time residents.
+                Overall, collected income tax is projected to go down slightly, decreasing by $308,000,000.
               </div>
             </div>
             
             <div class="row">
-              <div class="column width_1/4">
-                <img class="right width-50" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/SnowbirdTax.svg" />
-              </div>
-              
-              <div class="column width_1/4 number">
-                <div><strong>The Snowbird Tax</strong></div>
-              </div>
-              
-              <div class="column width_1/2 number last">
-                <div>Expected to raise:</div>
-                <div class="highlight positive">$30,000,000</div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="separator"></div>
-          
-          <div class="flurid section-snow-bird-tax">
-            <div class="row">
-              <div class="column width_1/1 last section-description">
-                Income tax collected is projected to <strong>go down</strong> (slightly) decreasing $308,000,000 to $17,128,000,000.
+              <div class="column width_1/1 last section-summary">
+                <div>For a total collected of</div>
+                <div class="highlight positive number">+$17,128,000,000</div>
               </div>
             </div>
             
@@ -477,22 +516,64 @@
           <div class="flurid section-sales-tax-receipts">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                The governor has proposed a dramatic expansion projected to raise sales tax receipts by:
+                The Governor has proposed a dramatic base expansion projected to raise sales tax receipts by:
+              </div>
+            </div>
+            
+            <div class="row number">
+              <div class="column width_1/2 pad-top-5">
+                <div class="highlight positive">+$4,464,746,000</div>
+              </div>
+              
+              <div class="column width_1/2 last">
+                <ul class="image-list pad-side-10">
+                  <li class="clear-block">
+                    <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/DigitalandSattelite.svg" />
+                    <div class="left">
+                      <div>Digital products
+                        <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
+                      </div>
+                      <div class="note">$31,200,000</div>
+                    </div>
+                  </li>
+                  <li class="clear-block">
+                    <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ClothingTax.svg" />
+                    <div class="left">
+                      <div>Consumer Goods & Services
+                        <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
+                      </div>
+                      <div class="note">$1,060,000,000</div>
+                    </div>
+                  </li>
+                  <li class="clear-block">
+                    <img class="left" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/B2Bsalestax.svg" />
+                    <div class="left">
+                      <div>Business Services
+                        <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a>
+                      </div>
+                      <div class="note">$3,200,000</div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
             
             <div class="row">
-              <div class="column width_1/2">
-                <ul class="image-list pad-side-5 number">
-                  <li><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/B2Bsalestax.svg" /> B2B</li>
-                  <li><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/DigitalandSattelite.svg" /> Digital products</li>
-                  <li><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ClothingTax.svg" /> Consumer goods</li>
-                </ul>
+              <div class="column width_1/1 last section-summary">
+                <div>Tax exemptions for certain items, such as telecommunications equipment and court reporter documents, will also be repealed adding some $134,500,000 in revenue to the above total.</div>
               </div>
-              
-              <div class="column width_1/2 last">
-                <div class="highlight positive number">+$4,464,746,000</div>
-                <div class="note">(an NN.N% increase)</div>
+            </div>
+          
+            <div class="row">
+              <div class="column width_1/1 last">
+                <div class="read-more note">
+                  <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ReadMore.svg" />
+                  Read more: <a href="http://www.minnpost.com/politics-policy/2013/01/revamped-sales-tax-designed-reflect-today-s-service-oriented-economy">Revamped sales tax designed to reflect today's service oriented economy</a>
+                </div>
+                <div class="read-more note">
+                  <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ReadMore.svg" />
+                  Read more: <a href="http://www.minnpost.com/macro-micro-minnesota/2013/01/evaluating-economic-assumptions-dayton-s-budget">Evaluating economic assumptions in Dayton's budget</a>
+                </div>
               </div>
             </div>
           </div>
@@ -502,7 +583,7 @@
           <div class="flurid section-sales-tax-rates">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                Plans to decrease rate of sales tax from 6.875% to <strong>5.5%</strong>.
+                The proposed budget will <em>decrease</em> the sales tax rate from 6.875 to 5.5 percent.
               </div>
             </div>
             
@@ -523,7 +604,7 @@
           <div class="flurid section-sales-tax-motor">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                Proposal to increase the <strong>motor vehicle rental tax</strong>.
+                The Governor also proposes a bump in the motor vehicle rental tax, from 6.2 to 9.05 percent.
               </div>
             </div>
             
@@ -532,12 +613,8 @@
                 <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MotorVehicle.svg" />
               </div>
               
-              <div class="column width_1/2 last">
-                <div class="highlight negative number">+$15,000,000</div>
-                <div class="note italics">
-                  Want to read more?
-                  <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a> 
-                </div>
+              <div class="column width_1/2 last pad-top-5">
+                <div class="highlight positive number">+$15,000,000</div>
               </div>
             </div>
           </div>
@@ -547,7 +624,7 @@
           <div class="flurid section-sales-tax-motor">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                The amount of sales tax to be collected will be raised by $2,098,045,000 for a total of +$12,221,045,000.  (NN.N% increase).
+                Overall, the amount of sales tax collected will be raised by $2,098,045,000.
               </div>
             </div>
             
@@ -566,22 +643,28 @@
           
           <div class="flurid section-tobacco-tax-cigarette">
             <div class="row">
-              <div class="column width_1/2">
+              <div class="column width_1/1 last section-description">
+                The proposed budget includes a significant bump to the cigarette excise tax.
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/2 number">
                 <div><strong>Current</strong></div>
                 <img class="height-4" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/CigaretteSingle.svg" />
-                <div class="number">$0.48 per pack tax. <br /> $0.75 health impact fee.</div>
+                <div>$0.48 per pack tax. <br /> $0.75 health impact fee.</div>
               </div>
               
-              <div class="column width_1/2 last">
+              <div class="column width_1/2 last number">
                 <div><strong>Proposed</strong></div>
                 <img class="height-4" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/CigarettesMain.svg" />
-                <div class="number">$0.48 per pack tax. <br /> $0.75 health impact fee.</div>
+                <div>$1.42 per pack tax. <br /> $0.75 health impact fee.</div>
               </div>
             </div>
             
             <div class="row">
               <div class="column width_1/1 last section-summary">
-                <div>Total fees increase to $1.23 to $2.17 per pack.</div>
+                <div>Total fees increase from $1.23 to $2.17 per pack.</div>
               </div>
             </div>
           </div>
@@ -595,14 +678,26 @@
               </div>
               
               <div class="column width_1/2 number last">
-                <div>Other tobacco products increase from 35% to 55%.</div>
-                <div class="note">(Health impact remains at 35)</div>
+                <div>The current tobacco products excise tax of 35 percent will increase to </div>
+                <div class="highlight">55 percent</div>
+                <div class="note">(of wholesale price)</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="separator"></div>
+          
+          <div class="flurid section-tobacco-tax-total">
+            <div class="row">
+              <div class="column width_1/1 last section-summary">
+                <div>The total tax and fees on tobacco products will increase from <strong>70 to 90 percent</strong> of the wholesale price.</div>
               </div>
             </div>
             
             <div class="row">
               <div class="column width_1/1 last section-summary">
-                <div>Total tax and fees increase from 70% to 90%.</div>
+                <div>Combined, the increase in cigarette and tobacco taxes will raise</div>
+                <div class="highlight number positive">$369,900,000</div>
               </div>
             </div>
           </div>
@@ -614,7 +709,7 @@
           <div class="flurid section-corporate-tax-other">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                <div>The budget proposes dropping rate from 9.8% to 8.4% (which would put MN from 4th to 12th highest among states).</div>
+                <div>The Governor recommends several changes to corporate tax policies, including dropping the rate from 9.8 to 8.4 percent (moving Minnesota from 4th to 12th highest among states).</div>
               </div>
             </div>
             
@@ -623,14 +718,30 @@
                 <div>A cost of:</div>
               </div>
               
-              <div class="column width_1/1 last">
+              <div class="column width_1/2 last">
                 <div class="highlight negative number">-$318,000,000</div>
               </div>
             </div>
             
             <div class="row">
               <div class="column width_1/1 last">
-                <div><strong>But</strong> expands types of businesses/loopholes/etc.</div>
+                <div><strong>But</strong> the proposal also closes loopholes and expands the types of businesses covered, including:</div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/2 number">
+                <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/CorporateTax.svg" />
+              </div>
+              
+              <div class="column width_1/2 number last">
+                <ol class="sub-note align-left">
+                  <li>Repealing the current law subtraction for foreign royalties and provisions for foreign operating corporations (FOCs)</li>
+                  <li>Requiring that all sales to this state of a unitary business be included in the sales factor for this state.</li>
+                  <li>Adopting statutory language requiring business transactions to meet an economic substance test to be allowed in determining Minnesota taxable income.</li>
+                  <li>Amending statutes to conform to the federal law treatment of foreign entities in Section 701 of the Internal Revenue Code. <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                  <li>Eliminating the unintended double-deduction by excluding dividends received from a real estate investment trust (REIT) in calculating the deduction allowed to a corporation for dividends received deduction (DRD) from another corporation</li>
+                </ol>
               </div>
             </div>
             
@@ -639,37 +750,57 @@
                 <div>Earning an additional:</div>
               </div>
               
-              <div class="column width_1/1 last">
+              <div class="column width_1/2 last">
                 <div class="highlight positive number">+$322,900,000</div>
               </div>
             </div>
             
             <div class="row">
-              <div class="column width_1/1 last">
-                <div>For a total corporate tax earning of:</div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="column width_1/2 number">
-                <img class="width-50" src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/CorporateTax.svg" />
-              </div>
-              
-              <div class="column width_1/1 last">
-                <div class="highlight positive number">+$1,959,000,000</div>
+              <div class="column width_1/1 last section-summary">
+                <div>Factoring in changes, corporate taxes will bring in a revenue of</div>
+                <div class="highlight number positive">+$1,959,000,000</div>
+                <div class="note">(a .25% increase from forecast)</div>
               </div>
             </div>
           </div>
         </div>
         
-        <div id="other-tax">
-          <h4>Other Tax Changes</h4>
-          <p>Stuff goes here..........</p>
+        <div id="other-revenue">
+          <h4>Other Revenue Changes</h4>
           
+          <div class="flurid section-corporate-tax-other">
+            <div class="row">
+              <div class="column width_1/1 last section-description">
+                <div><strong>Other tax changes</strong> proposed included levy change interactions, statewide property tax reduction for businesses, and a medicare surcharge, for a total of:</div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/1 last section-summary">
+                <div class="highlight number positive">+$23,531,000</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="separator"></div>
+          
+          <div class="flurid section-corporate-tax-other">
+            <div class="row">
+              <div class="column width_1/1 last section-description">
+                <div>Non-tax revenue change include adjustments to transfers, the largest of which is -$50,000,000 in revenue from health impact fee for cigarettes & tobacco (assuming people will quit smoking). The total change in non-tax revenues is:</div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="column width_1/1 last section-summary">
+                <div class="highlight number negative">-$ 12,000,000.</div>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div id="total-tax">
-          <h4>Total Tax</h4>
+          <h4>Total Tax Changes</h4>
           
           <div class="flurid section-total-tax">
             <div class="row">
@@ -680,9 +811,9 @@
             
             <div class="row">
               <div class="column width_1/1 last section-summary">
-                <div>Total in new revenue</div>
-                <div class="highlight positive number">+$11,780,000,000</div>
-                <div class="note">($2,139,000,000 versus forecast)</div>
+                <div>Taken together, the revenue changes proposed would raise</div>
+                <div class="highlight positive number">+$2,127,280,000</div>
+                <div class="note">(NN% increase from forecast)</div>
               </div>
             </div>
           </div>
@@ -695,55 +826,132 @@
           <div class="flurid section-total-tax">
             <div class="row">
               <div class="column width_1/1 last section-description">
-                <div>The new budget proposes to increase spending by a total of:</div>
+                <div>The Governor is proposing to increase expenditures by a total of</div>
                 <div class="highlight positive number">+$1,031,000,000</div>
               </div>
             </div>
             
-            <div class="row number">
-              <div class="column width_1/5">
+            <div class="row number f-size-75">
+              <div class="column width_1/4">
                 <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/K12spending.svg" />
                 <div><strong>K-12 Education</strong></div>
-                <ul>
-                  <li>item one</li>
-                  <li>item two</li>
+                <div class="highlight positive">+$344.2 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>Optional all-day kindergarten ($49.2 mil)</li>
+                  <li>Formula shift ($118.5 mil)  <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                  <li>Special education ($124.8 mil)</li>
+                  <li>Early childhood scholarships ($44 mil)</li>
                 </ul>
               </div>
               
-              <div class="column width_1/5">
+              <div class="column width_1/4">
                 <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/HigherEd.svg" />
                 <div><strong>Higher Education</strong></div>
-                <ul>
-                  <li>item one</li>
-                  <li>item two</li>
+                <div class="highlight positive">+$250.4 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>State grant program ($80 mil)</li>
+                  <li>MnSCU funding ($46 mil) <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                  <li>MnSCU retain staff ($34 mil)</li>
+                  <li>U of M funding ($80 mil)</li>
                 </ul>
               </div>
               
-              <div class="column width_1/5">
+              <div class="column width_1/4">
                 <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/LocalAid.svg" />
-                <div><strong>Local Aids and Credits</strong></div>
-                <ul>
-                  <li>item one</li>
-                  <li>item two</li>
+                <div class="l-height-1-50"><strong>Property Tax Aids & Credits</strong></div>
+                <div class="highlight positive">+$117.1 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>City aid (LGA) ($80 mil)</li>
+                  <li>County aid ($40 mil)</li>
                 </ul>
               </div>
               
-              <div class="column width_1/5">
+              <div class="column width_1/4 last">
                 <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/HealthandHuman.svg" />
-                <div><strong>Health and Human Services</strong></div>
-                <ul>
-                  <li>item one</li>
-                  <li>item two</li>
+                <div class="l-height-1-50"><strong>Health & Human Services</strong></div>
+                <div class="highlight positive">+$128.3 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>Raised Medical Assistance rates ($27.2 mil)</li>
+                  <li>Access to quality care for high needs children ($20.2 mil)</li>
                 </ul>
               </div>
-              
-              <div class="column width_1/5 last">
+            </div>
+            
+            <div class="row number f-size-75">
+              <div class="column width_1/4">
                 <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/PublicSafety.svg" />
                 <div><strong>Public Safety</strong></div>
-                <ul>
-                  <li>item one</li>
-                  <li>item two</li>
+                <div class="highlight positive">+$86.1 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>Department of Corrections ($38 mil) <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                  <li>Trial courts ($29.2 mil) <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
                 </ul>
+              </div>
+              
+              <div class="column width_1/4">
+                <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Train.svg" />
+                <div><strong>Transportation</strong></div>
+                <div class="highlight negative">-$25.6 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>TED Program ($20 mil) <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                  <li>Met Council transit (-$46.8 mil) <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                </ul>
+              </div>
+              
+              <div class="column width_1/4">
+                <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Clipboard.svg" />
+                <div><strong>Economic Development</strong></div>
+                <div class="highlight positive">+$70.1 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>Minnesota Investment Fund ($30 mil) <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                  <li>Minnesota Job Creation Fund ($25 mil) <a class="details-tooltip" href="#" title="Learn more"><img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/MoreInfoicon.png" /></a></li>
+                </ul>
+              </div>
+              
+              <div class="column width_1/4 last">
+                <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Clipboard.svg" />
+                <div><strong>Debt Service</strong></div>
+                <div class="highlight positive">$28.5 mil</div>
+              </div>
+            </div>
+            
+            <div class="row number f-size-75">
+              <div class="column width_1/3">
+                <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Tree.svg" />
+                <div><strong>Environment & Energy</strong></div>
+                <div class="highlight positive">+$17.6 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>Aquatic invasive species management ($7.5 mil)</li>
+                </ul>
+              </div>
+              
+              <div class="column width_1/3">
+                <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Capitol.svg" />
+                <div><strong>State Government</strong></div>
+                <div class="highlight positive">+$13.9 mil</div>
+                <ul class="align-left f-size-75 l-height-1-50">
+                  <li>Explore Minnesota tourism ($15 mil)</li>
+                </ul>
+              </div>
+              
+              <div class="column width_1/3 last">
+                <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/Tractor.svg" />
+                <div><strong>Agriculture</strong></div>
+                <div class="highlight positive">+$670,000</div>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="column width_1/1 last">
+                <div class="read-more note">
+                  <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ReadMore.svg" />
+                  Read more: <a href="http://www.minnpost.com/cityscape/2013/01/dayton-offers-game-changing-transit-plan
+">Dayton offers game changing transit plan</a>
+                </div>
+                <div class="read-more note">
+                  <img src="https://s3.amazonaws.com/data.minnpost/projects/minnpost-governor-budget-2013/images/ReadMore.svg" />
+                  Read more: <a href="http://www.minnpost.com/learning-curve/2013/01/education-advocates-laud-daytons-proposed-funding-worry-about-sustainability">Education advocates laud Daytons's proposed funding, worry about sustainability</a>
+                </div>
               </div>
             </div>
             
