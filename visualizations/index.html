@@ -873,16 +873,21 @@ Paper by Tom Schott</p>
             },
             yAxis: {
               title: {
-                text: 'In millions of $',
+                text: 'In billions of $'
+              },
+              labels: {
+                formatter: function() {
+                  return Highcharts.numberFormat((this.value / 1000000000), 1) + 'B';
+                }
               }
             },
             legend: { enabled: true },
             tooltip: {
               formatter: function() {
                 return '' + 
-                  this.series.name + ': <strong>$' + Highcharts.numberFormat(this.y, 0) + 'M</strong>' +
+                  this.series.name + ': <strong>$' + Highcharts.numberFormat(this.y, 0) + '</strong>' +
                   '<br /><br />' +
-                  '<em>Total: $' + Highcharts.numberFormat(this.point.stackTotal, 0) + 'M</em>';
+                  '<em>Total: $' + Highcharts.numberFormat(this.point.stackTotal, 0) + '</em>';
               }
             },
             plotOptions: {
@@ -895,27 +900,27 @@ Paper by Tom Schott</p>
             },
             series: [ {
               name: 'All other taxes',
-              data: [2200,2198]
+              data: [2200000000, 2198000000]
         
             }, {
               name: 'Statewide property tax',
-              data: [1676,1651]
+              data: [1676000000, 1651000000]
         
             }, {
               name: 'Cigarette tax',
-              data: [389,759]
+              data: [389000000, 759000000]
         
             }, {
               name: 'Corporate tax',
-              data: [1954,1959]
+              data: [1954000000, 1959000000]
         
             }, {
               name: 'Sales tax',
-              data: [10123,12222]
+              data: [10123000000, 12222000000]
         
             }, {
               name: 'Income tax',
-              data: [17436,17128]
+              data: [17436000000, 17128000000]
         
             }]
           });
@@ -935,7 +940,12 @@ Paper by Tom Schott</p>
             yAxis: {
               min: 0,
               title: {
-                text: 'In thousands of $',
+                text: 'In billions of $'
+              },
+              labels: {
+                formatter: function() {
+                  return Highcharts.numberFormat((this.value / 1000000000), 1) + 'B';
+                }
               }
             },
             legend: {
@@ -944,8 +954,10 @@ Paper by Tom Schott</p>
             },
             tooltip: {
               formatter: function() {
-                return ''+
-                  this.series.name +': $'+ Highcharts.numberFormat(this.y,0) +',000';
+                return '' + 
+                  this.series.name + ': <strong>$' + Highcharts.numberFormat(this.y, 0) + '</strong>' +
+                  '<br /><br />' +
+                  '<em>Total: $' + Highcharts.numberFormat(this.point.stackTotal, 0) + '</em>';
               }
             },
             plotOptions: {
@@ -955,37 +967,37 @@ Paper by Tom Schott</p>
             },
               series: [{
               name: 'Agriculture',
-              data: [77560,78230]
+              data: [77560000, 78230000]
             }, {
               name: 'Transportation',
-              data: [180050,154434]
+              data: [180050000,154434000]
             }, {
               name: 'Economic Development',
-              data: [165272,235340]
+              data: [165272000,235340000]
             }, {
               name: 'Environment, Energy & Natural Resources',
-              data: [266000,283616]
+              data: [266000000,283616000]
             }, {
               name: 'State Government',
-              data: [915410,929310]
+              data: [915410000,929310000]
             }, {
               name: 'Debt Service',
-              data: [1291446,1319967]
+              data: [1291446000,1319967000]
             }, {
               name: 'Public Safety',
-              data: [1825379,1911509]
+              data: [1825379000,1911509000]
             }, {
               name: 'Higher Ed',
-              data: [2565262,2815626]
+              data: [2565262000,2815626000]
             }, {
               name: 'Property Tax Aids & Credits',
-              data: [2728800,2845920]
+              data: [2728800000,2845920000]
             }, {
               name: 'Health & Human Services',
-              data: [11442841,11571180]
+              data: [11442841000,11571180000]
             }, {
               name: 'K-12',
-              data: [15179340, 15523562]
+              data: [15179340000, 15523562000]
             }]
           });
         });
