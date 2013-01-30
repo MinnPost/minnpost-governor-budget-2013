@@ -748,7 +748,7 @@
             
             <div class="row">
               <div class="column width_1/1 last">
-                <div class="example-chart">CHART GOES HERE</div>
+                <div id="spending-changes-chart"></div>
               </div>
             </div>
           </div>
@@ -917,6 +917,75 @@ Paper by Tom Schott</p>
               name: 'Income tax',
               data: [17436,17128]
         
+            }]
+          });
+          
+          // Total spending chart
+          var spendingChart = new Highcharts.Chart({
+            chart: {
+              renderTo: 'spending-changes-chart',
+              type: 'bar'
+            },
+            title: {
+              text: 'Spending changes in the 2014-15 governor\'s budget'
+            },
+            xAxis: {
+              categories: ['Current law', 'Governor\'s proposal']
+            },
+            yAxis: {
+              min: 0,
+              title: {
+                text: 'In thousands of $',
+              }
+            },
+            legend: {
+              backgroundColor: '#FFFFFF',
+              reversed: true
+            },
+            tooltip: {
+              formatter: function() {
+                return ''+
+                  this.series.name +': $'+ Highcharts.numberFormat(this.y,0) +',000';
+              }
+            },
+            plotOptions: {
+              series: {
+                stacking: 'normal'
+              }
+            },
+              series: [{
+              name: 'Agriculture',
+              data: [77560,78230]
+            }, {
+              name: 'Transportation',
+              data: [180050,154434]
+            }, {
+              name: 'Economic Development',
+              data: [165272,235340]
+            }, {
+              name: 'Environment, Energy & Natural Resources',
+              data: [266000,283616]
+            }, {
+              name: 'State Government',
+              data: [915410,929310]
+            }, {
+              name: 'Debt Service',
+              data: [1291446,1319967]
+            }, {
+              name: 'Public Safety',
+              data: [1825379,1911509]
+            }, {
+              name: 'Higher Ed',
+              data: [2565262,2815626]
+            }, {
+              name: 'Property Tax Aids & Credits',
+              data: [2728800,2845920]
+            }, {
+              name: 'Health & Human Services',
+              data: [11442841,11571180]
+            }, {
+              name: 'K-12',
+              data: [15179340, 15523562]
             }]
           });
         });
