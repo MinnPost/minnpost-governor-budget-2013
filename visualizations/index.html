@@ -345,9 +345,6 @@
       }
     </style>
     
-    <!--[if lte IE 7]>
-    <![endif]-->
-    
     <!--[if lte IE 8]>
       <style type="text/css">
         .operator {
@@ -358,6 +355,23 @@
           display: block;
           width: 20px;
           float: right;
+          padding-left: 5px;
+        }
+      </style>
+    <![endif]-->
+    
+    <!--[if lte IE 7]>
+      <style type="text/css">
+        #spending-changes-chart,
+        #total-tax-changes-chart,
+        #income-tax-chart {
+          height: 15em;
+        }
+        
+        .section-sales-tax-receipts .image-list li .left a {
+          display: inline;
+          width: 20px;
+          float: none;
           padding-left: 5px;
         }
       </style>
@@ -1140,14 +1154,14 @@ Paper by Tom Schott</p>
               categories: ['Forecast','New top rate','Property tax rebate','Snowbird tax','Governor proposal'],
               title: {
                 text: null
-              },
+              }
             },
             yAxis: {
               min: -2000000000,
               tickInterval: 2500000000,
               startOnTick: 'false',
               title: {
-                text: 'In billions of $',
+                text: 'In billions of $'
               },
               labels: {
                 formatter: function() {
