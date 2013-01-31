@@ -334,6 +334,10 @@
         top: 0;
       }
       
+      .operator .r-menu-open {
+        display: none;
+      }
+      
       .ui-tooltip,
       .qtip {
         font-size: 125%;
@@ -347,6 +351,54 @@
        * Responsive creen size styles
        */
       @media screen and (max-width: 960px) {
+        .info-container {
+          font-size: 150%;
+        }
+        
+        .operator.glued {
+          position: fixed;
+          width: 100%;
+        }
+        
+        .operator .clear-block {
+          position: relative;
+        }
+        .operator .operator-top {
+          float: none;
+          position: absolute;
+          top: 0;
+          right: 5px;
+          padding-top: 2px;
+          margin-top: 0;
+        }
+      }
+      @media screen and (max-width: 840px) {
+        .operator .r-menu-open {
+          display: block;
+        }
+        .operator .operator-nav {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 730px) {
+        .info-container {
+          font-size: 120%;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .info-container {
+          font-size: 110%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .info-container {
+          font-size: 100%;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        .info-container {
+          font-size: 100%;
+        }
       }
     </style>
     
@@ -400,6 +452,10 @@
     
       <div class="operator">
         <div class="clear-block">
+          <div class="r-menu-open">
+            <a class="r-menu-action" href="#">Menu</a>
+          </div>
+          
           <ul class="operator-nav">
             <li><a class="active" href="#income-tax">Income Tax</a></li>
             <li><a href="#sales-tax">Sales Tax</a></li>
@@ -1123,17 +1179,28 @@
           
           // Handle clicking scrolling to menu items
           $operatorItems.on('click', function(e) {
-            var $this = $(this);
-            var top = $($this.attr('href')).offset().top;
             e.preventDefault();
             
-            $('html, body').animate({ scrollTop: (top - orgH - anchorOffset) }, 600,
-              function() {
-                if ($operatorNavItems.is($this)) {
-                  $operatorItems.removeClass('active');
-                  $this.addClass('active');
-                }
-              });
+            var $this = $(this);
+            var top = ($($this.attr('href')).size()) ? 
+              $($this.attr('href')).offset().top : null;
+              
+            if (top) {
+              $('html, body').animate({ scrollTop: (top - orgH - anchorOffset) }, 600,
+                function() {
+                  if ($operatorNavItems.is($this)) {
+                    $operatorItems.removeClass('active');
+                    $this.addClass('active');
+                  }
+                });
+            }
+          });
+          
+          // Responsive menu
+          $('a.r-menu-action').click(function(e) {
+            e.preventDefault();
+            
+            $('.operator-nav').slideToggle();
           });
           
           // Tooltip help
