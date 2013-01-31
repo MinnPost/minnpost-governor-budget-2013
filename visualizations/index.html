@@ -250,6 +250,11 @@
         padding-right: .5em;
       }
       
+      .info-container .chart-container {
+        width: 100%;
+        height: 15em;
+      }
+      
       .operator {
         color: #58585A;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -345,6 +350,23 @@
       }
     </style>
     
+    <style type="text/css" media="print">
+      /**
+       * Print styles
+       */
+      .info-container {
+        font-size: 100%;
+      }
+      
+      .section-total-tax .height-6 img {
+        width: 25%;
+      }
+      
+      .chart-container {
+        display: none;
+      }
+    </style>
+    
     <!--[if lte IE 8]>
       <style type="text/css">
         .operator {
@@ -362,12 +384,6 @@
     
     <!--[if lte IE 7]>
       <style type="text/css">
-        #spending-changes-chart,
-        #total-tax-changes-chart,
-        #income-tax-chart {
-          height: 15em;
-        }
-        
         .section-sales-tax-receipts .image-list li .left a {
           display: inline;
           width: 20px;
@@ -537,7 +553,7 @@
             
             <div class="row">
               <div class="column width_1/1 last">
-                <div id="income-tax-chart"></div>
+                <div class="chart-container" id="income-tax-chart"></div>
               </div>
             </div>
           </div>
@@ -830,7 +846,7 @@
           <div class="flurid section-total-tax">
             <div class="row">
               <div class="column width_1/1 last">
-                <div id="total-tax-changes-chart"></div>
+                <div class="chart-container" id="total-tax-changes-chart"></div>
               </div>
             </div>
             
@@ -1004,7 +1020,7 @@
             
             <div class="row">
               <div class="column width_1/1 last">
-                <div id="spending-changes-chart"></div>
+                <div class="chart-container" id="spending-changes-chart"></div>
               </div>
             </div>
           </div>
